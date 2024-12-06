@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms two</title>
+        <style>
+            body{
+                background-color: bisque;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Forms in HTML</h1>
+        <form action="" method="GET" accept-charset="UTF-16" autocomplete="off" enctype="text/plain">
+            <label for="fname">First Name</label> <br />
+            <input type="text" placeholder="first_name" name="" id="fname"><br />
+            <label for="lname">Last Name</label> <br />            
+            <input type="text" placeholder="last_name" name="" id="lname"><br />
+            <label for="age">Age</label> <br />            
+            <input type="text" placeholder="age" name="" id="age"><br />
+            <label for="cnt">Country</label> <br />            
+            <input type="text" value="India" placeholder="country" name="" id="cnt"> <input type="reset" value="Reset"> <br />
+            <label for="week">Work Week</label> <br />            
+            <input type="week" placeholder="week" name="" id="week"><br /> <br />
+
+            <select name="editors" id="" multiple>
+                <option value="VSCode"> VSCode</option>
+                <option value="IntelliJ">IntelliJ</option>
+                <option value="Sublime">Sublime</option>
+                <option value="Notepad++">Notepad++</option>
+            </select>
+
+            <br /> <br />
+
+            <input list="editors" name="editor" id="">
+            <datalist id="editors">
+                <option value="VSCode"> VSCode</option>
+                <option value="IntelliJ">IntelliJ</option>
+                <option value="Sublime">Sublime</option>
+                <option value="Notepad++">Notepad++</option>
+            </datalist>
+
+            <input type="hidden" name="">
+            <!-- useful for django token fields -->
+
+            <br />
+            <br />
+            <button type="submit"> Submit </button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables</title>
+        <style>
+            table{
+                width: 100%;
+                border-collapse: collapse ;
+            }
+            td,th{
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;
+            }
+            tr:nth-child(odd){
+                background-color: #ffe4c4;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <colgroup>
+                <col span="2" style="background-color: palegreen;"/> 
+            </colgroup>
+            <tr>
+                <th>Country</th>
+                <th>Country Code</th>
+                <th>Email</th>
+                <th>ZIP</th>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>IN</td>
+                <td>india@google.com</td>
+                <td>110001</td>
+            </tr>
+            <tr>
+                <td>United States of America</td>
+                <td>USA</td>
+                <td>usa@google.com</td>
+                <td>20011</td>
+            </tr>
+            <tr>
+                <td>Japan</td>
+                <td>JP</td>
+                <td>japan@google.com</td>
+                <td>150-0012</td>
+            </tr>
+            <tr>
+                <td>Finland</td>
+                <td>FN</td>
+                <td>finland@google.com</td>
+                <td>00100</td>
+            </tr>
+        </table>
+    </body>
+</html>
