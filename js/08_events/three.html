@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Async PT2</title>
+    </head>
+    <body>
+        <h1>OH MY LORD MAX</h1>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </body>
+    <script>
+        const sayTheGoat = function(str){
+            console.log(str)
+        }
+       
+        let intervalId=null;
+
+        document.querySelector('#start').addEventListener('click', function(){
+            if(!intervalId){
+            intervalId = setInterval(sayTheGoat,500,"goatifi")
+            }
+        },false)
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearInterval(intervalId)
+            intervalId=null;
+        },false)
+
+
+    </script>
+</html>
