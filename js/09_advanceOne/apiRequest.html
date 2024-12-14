@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body style="background-color: #414141;">
+        <button id="getDetails"> get details</button>
+        <br />
+
+        <div id="card-container">
+          
+        </div>
+
+    </body>
+    <script>
+        document.querySelector('#getDetails').addEventListener('click', function (e) {
+            e.preventDefault();
+            const requestUrl = "https://api.github.com/users/tanmayc43";
+            const xhr = new XMLHttpRequest();
+            let data;
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    data = JSON.parse(xhr.responseText); 
+                    console.log(data)
+                    console.log(data.name)
+                    addCard(data.avatar_url ,data.name)
+                }
+            };
+            xhr.open('GET', requestUrl);
+            xhr.send(); 
+            
+        }, false);
+
+        function addCard(imageUrl, name) {
+            const container = document.getElementById('card-container');
+            const card = document.createElement('div');
+            card.className = 'card';
+            const cardContent = `
+                <img src=${imageUrl} alt="profile photo" class="card-image">
+                <h2>${name}</h2>
+            `;
+            card.innerHTML = cardContent;
+            container.appendChild(card);
+        }
+
+
+        
+        
+        
+
+    </script>
+</html>
