@@ -101,3 +101,6 @@ fetch('https://api.github.com/users/tanmayc43')
 }).finally(
     console.log('promise either completed or not')
 )
+
+//fetch is a global function
+//it returns a promise fulfilled with response object
